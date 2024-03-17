@@ -33,7 +33,7 @@
     .button {
       position: relative; /* Ensure button is above envelope */
       display: block;
-      margin: 20px auto;
+      margin: 100px auto 20px; /* Adjusted margin to move the button lower */
       padding: 10px 20px;
       background-color: #007bff;
       color: #fff;
@@ -71,8 +71,8 @@
 <script>
   document.getElementById('open-letter').addEventListener('click', function() {
     document.getElementById('letter').style.display = 'block';
-    document.getElementById('envelope').style.transform = 'translateX(-150%)'; // Move envelope off-screen
-    this.style.display = 'none';
+    document.getElementById('envelope').src = './Picture1.png'; // Change envelope image
+    document.getElementById('open-letter').style.display = 'none'; // Hide the button
   });
 </script>
 
