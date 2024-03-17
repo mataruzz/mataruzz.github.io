@@ -20,13 +20,11 @@
       position: relative;
     }
     #envelope {
-      width: 100px;
-      height: 80px;
-      background-color: #f1c40f;
       position: absolute;
-      top: 10px;
-      left: 10px;
-      border-radius: 10px 10px 0 0;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: transform 0.3s ease;
     }
     #letter {
       display: none;
@@ -56,76 +54,11 @@
 <body>
 
 <div class="container">
-  <div id="envelope"></div>
+  <img id="envelope" src="closed-envelope.png" alt="Closed Envelope">
   <div id="letter">
     <h2>Secret Letter</h2>
     <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.
-    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
     <p>Scroll down to reveal your special gift!</p>
   </div>
   <button id="open-letter" class="button">Open Envelope</button>
@@ -139,26 +72,8 @@
 <script>
   document.getElementById('open-letter').addEventListener('click', function() {
     document.getElementById('letter').style.display = 'block';
-    document.getElementById('envelope').style.display = 'none';
+    document.getElementById('envelope').style.transform = 'translateX(-150%)'; // Move envelope off-screen
     this.style.display = 'none';
-  });
-
-  var giftDisplayed = false;
-
-  window.addEventListener('scroll', function() {
-    var letter = document.getElementById('letter');
-    var gift = document.getElementById('gift');
-    var scrollPosition = window.scrollY + window.innerHeight;
-    var letterPosition = letter.offsetTop + letter.offsetHeight;
-
-    if (scrollPosition > letterPosition && !giftDisplayed) {
-      gift.style.display = 'block';
-      giftDisplayed = true;
-    }
-    if (scrollPosition < letterPosition && giftDisplayed) {
-      gift.style.display = 'none';
-      giftDisplayed = false;
-    }
   });
 </script>
 
