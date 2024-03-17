@@ -14,14 +14,14 @@
     .container {
       max-width: 800px;
       margin: 50px auto;
-      padding: 0 20px;
+      padding: 20px;
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       position: relative;
     }
     #envelope {
       position: absolute;
-      top: 40px;
+      top: 20px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 1;
@@ -63,6 +63,7 @@
   <div id="letter">
     <h2>Secret Letter</h2>
     <p>This is your secret message!</p>
+    <!-- More secret message content here -->
   </div>
   <button id="open-letter" class="button">Open Envelope</button>
   <div id="gift">
@@ -78,7 +79,6 @@
     document.getElementById('envelope').src = './Picture1.png'; // Change envelope image
     document.getElementById('envelope').style.transform = 'translateX(-150%)';
     this.style.display = 'none';
-    document.getElementById('gift').style.display = 'block'; // Show gift section
   });
 </script>
 
