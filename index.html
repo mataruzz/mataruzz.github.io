@@ -14,25 +14,29 @@
     .container {
       max-width: 800px;
       margin: 50px auto;
-      padding: 160px 20px 20px; /* Adjusted padding-top to accommodate both images */
+      padding: 0 20px; /* Adjusted padding */
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       position: relative;
     }
     #envelope {
       position: absolute;
-      top: 80px; /* Adjusted top position */
+      top: 40px; /* Adjusted position */
       left: 50%;
       transform: translateX(-50%);
+      z-index: 1;
       transition: transform 0.3s ease;
     }
     #letter {
-      padding-top: 20px; /* Added padding-top to create space for the letter text */
+      display: none;
+      margin-top: 100px; /* Adjusted margin */
+      padding-top: 20px; /* Added padding */
+      border-top: 1px solid #ccc; /* Added border */
     }
     .button {
       position: relative;
       display: block;
-      margin: 20px auto 0; /* Adjusted margin-top */
+      margin: 20px auto 0; /* Adjusted margin */
       padding: 10px 20px;
       background-color: #007bff;
       color: #fff;
@@ -44,6 +48,7 @@
     #gift {
       display: none;
       text-align: center;
+      margin-top: 20px; /* Added margin */
     }
     #voucher-link {
       color: #007bff;
@@ -55,11 +60,10 @@
 
 <div class="container">
   <img id="envelope" src="./Picture2.png" alt="Closed Envelope">
-  <img id="letter" src="./Picture1.png" alt="Open Envelope"> <!-- Added letter image -->
-  <div id="letter-content">
+  <div id="letter">
     <h2>Secret Letter</h2>
     <p>This is your secret message!</p>
-    <!-- Your secret message content here -->
+    <!-- More secret message content here -->
   </div>
   <button id="open-letter" class="button">Open Envelope</button>
   <div id="gift">
@@ -72,8 +76,8 @@
 <script>
   document.getElementById('open-letter').addEventListener('click', function() {
     document.getElementById('letter').style.display = 'block';
-    document.getElementById('envelope').style.display = 'none'; // Hide closed envelope
-    document.getElementById('letter-content').style.display = 'block'; // Show letter content
+    document.getElementById('envelope').src = './Picture1.png'; // Change envelope image
+    document.getElementById('envelope').style.transform = 'translateX(-150%)';
     this.style.display = 'none';
   });
 </script>
