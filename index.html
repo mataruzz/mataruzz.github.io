@@ -14,14 +14,14 @@
     .container {
       max-width: 800px;
       margin: 50px auto;
-      padding: 20px;
+      padding: 0 20px; /* Adjusted padding */
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       position: relative;
     }
     #envelope {
       position: absolute;
-      top: 20px;
+      top: 40px; /* Adjusted position */
       left: 50%;
       transform: translateX(-50%);
       z-index: 1;
@@ -29,14 +29,14 @@
     }
     #letter {
       display: none;
-      margin-top: 100px;
-      padding-top: 20px;
-      border-top: 1px solid #ccc;
+      margin-top: 100px; /* Adjusted margin */
+      padding-top: 20px; /* Added padding */
+      border-top: 1px solid #ccc; /* Added border */
     }
     .button {
       position: relative;
       display: block;
-      margin: 20px auto 0;
+      margin: 20px auto 0; /* Adjusted margin */
       padding: 10px 20px;
       background-color: #007bff;
       color: #fff;
@@ -48,7 +48,7 @@
     #gift {
       display: none;
       text-align: center;
-      margin-top: 20px;
+      margin-top: 20px; /* Added margin */
     }
     #voucher-link {
       color: #007bff;
@@ -65,7 +65,8 @@
     <p>This is your secret message!</p>
     <!-- More secret message content here -->
   </div>
-  <button id="open-letter" class="button">Open Envelope</button>
+  <img src="./Picture1.png" alt="Open Envelope" style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">
+  <button id="open-letter" class="button" style="position: relative; z-index: 2;">Open Envelope</button>
   <div id="gift">
     <h2>Your Special Gift</h2>
     <p>Congratulations! You've received a voucher for a SWEDISH MASSAGE.</p>
