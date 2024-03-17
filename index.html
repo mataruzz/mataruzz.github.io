@@ -14,14 +14,14 @@
     .container {
       max-width: 800px;
       margin: 50px auto;
-      padding: 0 20px; /* Adjusted padding */
+      padding: 0 20px;
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       position: relative;
     }
     #envelope {
       position: absolute;
-      top: 40px; /* Adjusted position */
+      top: 40px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 1;
@@ -29,14 +29,14 @@
     }
     #letter {
       display: none;
-      margin-top: 100px; /* Adjusted margin */
-      padding-top: 20px; /* Added padding */
-      border-top: 1px solid #ccc; /* Added border */
+      margin-top: 100px;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
     }
     .button {
       position: relative;
       display: block;
-      margin: 20px auto 0; /* Adjusted margin */
+      margin: 20px auto 0;
       padding: 10px 20px;
       background-color: #007bff;
       color: #fff;
@@ -48,7 +48,7 @@
     #gift {
       display: none;
       text-align: center;
-      margin-top: 20px; /* Added margin */
+      margin-top: 20px;
     }
     #voucher-link {
       color: #007bff;
@@ -63,7 +63,6 @@
   <div id="letter">
     <h2>Secret Letter</h2>
     <p>This is your secret message!</p>
-    <!-- More secret message content here -->
   </div>
   <button id="open-letter" class="button">Open Envelope</button>
   <div id="gift">
@@ -79,6 +78,7 @@
     document.getElementById('envelope').src = './Picture1.png'; // Change envelope image
     document.getElementById('envelope').style.transform = 'translateX(-150%)';
     this.style.display = 'none';
+    document.getElementById('gift').style.display = 'block'; // Show gift section
   });
 </script>
 
