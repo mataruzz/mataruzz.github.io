@@ -14,26 +14,25 @@
     .container {
       max-width: 800px;
       margin: 50px auto;
-      padding: 80px 20px 20px; /* Added padding-top for the envelope image */
+      padding: 160px 20px 20px; /* Adjusted padding-top to accommodate both images */
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       position: relative;
     }
     #envelope {
       position: absolute;
-      top: 0;
+      top: 80px; /* Adjusted top position */
       left: 50%;
       transform: translateX(-50%);
-      z-index: 1; /* Ensure envelope is behind other content */
       transition: transform 0.3s ease;
     }
     #letter {
-      display: none;
+      padding-top: 20px; /* Added padding-top to create space for the letter text */
     }
     .button {
-      position: relative; /* Ensure button is above envelope */
+      position: relative;
       display: block;
-      margin: 100px auto 20px; /* Adjusted margin to move the button lower */
+      margin: 20px auto 0; /* Adjusted margin-top */
       padding: 10px 20px;
       background-color: #007bff;
       color: #fff;
@@ -56,8 +55,10 @@
 
 <div class="container">
   <img id="envelope" src="./Picture2.png" alt="Closed Envelope">
-  <div id="letter">
+  <img id="letter" src="./Picture1.png" alt="Open Envelope"> <!-- Added letter image -->
+  <div id="letter-content">
     <h2>Secret Letter</h2>
+    <p>This is your secret message!</p>
     <!-- Your secret message content here -->
   </div>
   <button id="open-letter" class="button">Open Envelope</button>
@@ -71,8 +72,9 @@
 <script>
   document.getElementById('open-letter').addEventListener('click', function() {
     document.getElementById('letter').style.display = 'block';
-    document.getElementById('envelope').src = './Picture1.png'; // Change envelope image
-    document.getElementById('open-letter').style.display = 'none'; // Hide the button
+    document.getElementById('envelope').style.display = 'none'; // Hide closed envelope
+    document.getElementById('letter-content').style.display = 'block'; // Show letter content
+    this.style.display = 'none';
   });
 </script>
 
