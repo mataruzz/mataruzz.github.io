@@ -14,23 +14,24 @@
     .container {
       max-width: 800px;
       margin: 50px auto;
-      padding: 20px;
+      padding: 80px 20px 20px; /* Added padding-top for the envelope image */
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       position: relative;
     }
     #envelope {
       position: absolute;
-      top: 20px;
+      top: 0;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 1; /* Ensure envelope is behind other content */
       transition: transform 0.3s ease;
     }
     #letter {
       display: none;
-      padding-top: 100px; /* Adjust to fit the envelope height */
     }
     .button {
+      position: relative; /* Ensure button is above envelope */
       display: block;
       margin: 20px auto;
       padding: 10px 20px;
@@ -57,51 +58,7 @@
   <img id="envelope" src="./Picture2.png" alt="Closed Envelope">
   <div id="letter">
     <h2>Secret Letter</h2>
-    <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p> 
-    <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
-        <p>This is your secret message!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum felis nec ex vestibulum, sit amet venenatis purus tincidunt.</p>
-    <p>Scroll down to reveal your special gift!</p>
+    <!-- Your secret message content here -->
   </div>
   <button id="open-letter" class="button">Open Envelope</button>
   <div id="gift">
