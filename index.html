@@ -9,14 +9,30 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
         }
         .container {
             text-align: center;
             margin-top: 50px;
         }
+        #envelope, #second-envelope {
+            width: 200px;
+            height: auto;
+        }
         #letter {
             display: none;
             margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #open-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -24,18 +40,21 @@
 
 <div class="container">
     <img src="./Picture2.png" alt="Envelope" id="envelope">
-    <button onclick="openEnvelope()">Open Envelope</button>
-    <div id="letter">
+    <div id="letter" style="display: none;">
+        <img src="./Picture1.png" alt="Envelope" id="second-envelope">
         <p>This is your special letter!</p>
         <p>Congratulations! You've received a voucher for a <strong>SWEDISH MASSAGE</strong>.</p>
         <p>Click <a href="https://shapedsecretz.com/massage-services/">here</a> to redeem your voucher.</p>
     </div>
+    <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
 </div>
 
 <script>
     function openEnvelope() {
         document.getElementById("envelope").style.display = "none";
+        document.getElementById("second-envelope").style.display = "inline-block";
         document.getElementById("letter").style.display = "block";
+        document.getElementById("open-button").style.display = "none";
         window.addEventListener("scroll", revealGift);
     }
 
