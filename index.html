@@ -74,6 +74,14 @@
     document.getElementById("letter").style.display = "block";
     document.getElementById("open-button").style.display = "none";
     window.addEventListener("scroll", revealGift);
+        
+    // Change container styles
+    var container = document.querySelector('.container');
+    container.style.backgroundColor = 'transparent';
+    container.style.border = 'none';
+    container.style.boxShadow = 'none';
+
+        
 }
     function revealGift() {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
