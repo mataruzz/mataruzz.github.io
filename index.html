@@ -35,6 +35,12 @@
         .hidden {
             opacity: 0;
         }
+        .date {
+        text-align: right;
+        }
+        .dear {
+        text-align: left;
+        }
         #letter {
             text-align: justify, center;
             display: none;
@@ -114,7 +120,7 @@
         <div class="date">
             March 23, 2024
         </div>
-        <p>My dear Pepita,</p>
+        <div class="dear">My dear Pepita,</div>
         <p>
             Today marks a very special day for me... exactly 29 years ago, a beautiful baby girl was born in Spain! Her name was Irini lol no, I’m kidding, her name was Irene. The name itself held the promise of a princess, and as the years passed, she only grew more beautiful and intelligent. She was truly remarkable. Irene's intellect stood out, leading her to study abroad and win a scholarship in the USA. There was simply no competition; she was the most charming and intelligent girl in the world, though she might not have realized it at the time. Regrettably, guys, at that time I was still a little boy only looking for videogames and skateboard. But that... that's a story for another time.
         </p>
@@ -131,6 +137,10 @@
             I cannot wait to live together, just me and you. Sleeping together every night (just one finger touching tho LOL) and share every day. Cooking together, going out, have fun, travel surfing and do sports 😉 That is exactly how I imagine my life with you. Us as team-player, lover and best friend. I apologize if I get cranky at time. I care about you so much that I cannot either handle the simple thought of having a life not with you. I don’t want to loose you, because together we are uneatable! We make each other stronger and… we become much more athletic, if you know what I mean! I love you my little sweetheart. I LOVE YOU SO MUCH! Happy birthday <3 and have a great weekend in the mounting.
         </p>
         <p>Your guapito, Alvin</p>
+        <div class="dear">
+         <p>Your guapito</p>
+         <p>Alvin</p>
+        </div>
         <button id="reveal-button" onclick="revealGift()">Click to reveal your gift</button>
     </div>
     <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
@@ -161,7 +171,7 @@
         container.style.backgroundColor = 'transparent';
         container.style.border = 'none';
         container.style.boxShadow = 'none';
-        revealGift();
+        // revealGift();
     }
 
     function revealGift() {
