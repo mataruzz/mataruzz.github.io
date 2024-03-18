@@ -145,14 +145,7 @@
         container.style.backgroundColor = 'transparent';
         container.style.border = 'none';
         container.style.boxShadow = 'none';
-        
-        // Check if scrolled to the end of the page
-        var scrollPosition = window.scrollY;
-        var totalHeight = document.body.scrollHeight/1.2;
-        var windowHeight = window.innerHeight;
-        if (scrollPosition + windowHeight >= totalHeight) {
-            revealGift();
-        }
+        revealGift();
     }
 
     function revealGift() {
