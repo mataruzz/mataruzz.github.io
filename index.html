@@ -6,7 +6,7 @@
     <title>Envelope Surprise</title>
     <style>
         body {
-            font-family: cursive;
+            font-family: Arial, sans-serif;
             margin: 0;
             display: flex;
             justify-content: center;
@@ -41,6 +41,7 @@
             background-color: white;
             padding: 20px;
             border-radius: 10px;
+            font-family: cursive;
         }
         #open-button {
             background-color: blue;
@@ -96,8 +97,8 @@
     <img src="./Picture2.png" alt="Envelope" id="envelope">
     <div id="letter" style="display: none;">
         <img src="./Picture1.png" alt="Envelope" id="second-envelope">
-        <p>This is your special letter!</p>
-        <p>Your guapito, Alvin</p>
+        <p style="font-family: cursive;">This is your special letter!</p>
+        <p style="font-family: cursive;">Your guapito, Alvin</p>
         <button id="show-popup">Click to reveal your gift</button>
     </div>
     <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
