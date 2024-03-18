@@ -63,6 +63,8 @@
 
 <script>
     function openEnvelope() {
+        var container = document.getElementById("container");
+        container.classList.add("hidden"); // Hide the container
         document.getElementById("envelope").style.display = "none";
         document.getElementById("second-envelope").style.display = "inline-block";
         document.getElementById("letter").style.display = "block";
