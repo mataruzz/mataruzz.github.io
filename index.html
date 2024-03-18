@@ -45,6 +45,18 @@
             font-family: Georgia, serif;
             width: 500px;
         }
+                #reveal-button {
+            background-color: red; /* Red */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #reveal-button:hover {
+            background-color: darkred; /* Darker red on hover */
+        }
         #open-button {
             background-color: blue;
             color: white;
@@ -116,7 +128,7 @@
             I cannot wait to live together, just me and you. Sleeping together every night (just one finger touching tho LOL) and share every day. Cooking together, going out, have fun, travel surfing and do sports 😉 That is exactly how I imagine my life with you. Us as team-player, lover and best friend. I apologize if I get cranky at time. I care about you so much that I cannot either handle the simple thought of having a life not with you. I don’t want to loose you, because together we are uneatable! We make each other stronger and… we become much more athletic, if you know what I mean! I love you my little sweetheart. I LOVE YOU SO MUCH! Happy birthday <3 and have a great weekend in the mounting.
         </p>
         <p>Your guapito, Alvin</p>
-        <button id="show-popup">Click to reveal your gift</button>
+        <button id="reveal-button">Click to reveal your gift</button>
     </div>
     <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
 </div>
@@ -126,7 +138,8 @@
         <span class="popup-close" onclick="hidePopup()">&times;</span>
         <div class="popup-content">
             <p>Congratulations! You've reached the end.</p>
-            <p>You've received a voucher for a SWEDISH MASSAGE.</p>
+            <p>You've received a voucher for a SWEDISH MASSAGE.</p>            
+            <p>Send me a message on the day and time you wanna book, and I'll do for you.</p>
             <p>Click <span class="popup-link" onclick="redeemVoucher()">here</span> to redeem your voucher.</p>
         </div>
     </div>
