@@ -164,8 +164,7 @@
     function revealGift() {
         var letter = document.getElementById('letter');
         letter.style.display = 'block';
-        var showPopupButton = document.getElementById('show-popup');
-        showPopupButton.addEventListener('click', showPopup);
+        showPopup(); // Call the function directly to show the popup
     }
 
     function showPopup() {
@@ -182,6 +181,7 @@
         window.location.href = "https://shapedsecretz.com/massage-services/";
     }
 </script>
+
 
 </body>
 </html>
