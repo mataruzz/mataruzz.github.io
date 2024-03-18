@@ -147,7 +147,7 @@
         
         // Check if scrolled to the end of the page
         var scrollPosition = window.scrollY;
-        var totalHeight = document.body.scrollHeight;
+        var totalHeight = document.body.scrollHeight/1.2;
         var windowHeight = window.innerHeight;
         if (scrollPosition + windowHeight >= totalHeight) {
             revealGift();
