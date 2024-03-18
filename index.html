@@ -68,15 +68,13 @@
 
 <script>
     function openEnvelope() {
-        var container1 = document.getElementsByClassName("container")[0];
-        container1.classList.add("hidden"); // Hide the container
-        document.getElementById("envelope").style.display = "none";
-        document.getElementById("second-envelope").style.display = "inline-block";
-        document.getElementById("letter").style.display = "block";
-        document.getElementById("open-button").style.display = "none";
-        window.addEventListener("scroll", revealGift);
-    }
-
+    var envelope = document.getElementById("envelope");
+    envelope.style.display = "none";
+    document.getElementById("second-envelope").style.display = "inline-block";
+    document.getElementById("letter").style.display = "block";
+    document.getElementById("open-button").style.display = "none";
+    window.addEventListener("scroll", revealGift);
+}
     function revealGift() {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             alert("Congratulations! You've reached the end. You've received a voucher for a SWEDISH MASSAGE.");
