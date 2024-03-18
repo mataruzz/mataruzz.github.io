@@ -24,7 +24,12 @@
             border-radius: 10px; /* Optional: Add border radius for rounded corners */
             padding: 20px; /* Add padding to the container */
         }
-        #envelope, #second-envelope {
+        #envelope{
+            width: 100px;
+            height: auto;
+        }
+        
+        #second-envelope {
             width: 200px;
             height: auto;
         }
@@ -53,6 +58,34 @@
             transform: translateX(-50%);
             margin-top: 20px;
         }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            display: none;
+        }
+        .popup {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+        }
+        .popup-content {
+            margin-bottom: 20px;
+        }
+        .popup-link {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -79,45 +112,53 @@
             I cannot wait to live together, just me and you. Sleeping together every night (just one finger touching tho LOL) and share every day. Cooking together, going out, have fun, travel surfing and do sports 😉 That is exactly how I imagine my life with you. Us as team-player, lover and best friend. I apologize if I get cranky at time. I care about you so much that I cannot either handle the simple thought of having a life not with you. I don’t want to loose you, because together we are uneatable! We make each other stronger and… we become much more athletic, if you know what I mean! I love you my little sweetheart. I LOVE YOU SO MUCH! Happy birthday <3 and have a great weekend in the mounting.
         </p>
         <p>Your guapito, Alvin</p>
-        <p>Congratulations! You've received a voucher for a <strong>SWEDISH MASSAGE</strong>.</p>
-        <p>Click <a href="https://shapedsecretz.com/massage-services/">here</a> to redeem your voucher.</p>
+
     </div>
     <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
+</div>
+
+<div class="overlay" id="overlay">
+    <div class="popup">
+        <div class="popup-content">
+            <p>Congratulations! You've reached the end.</p>
+            <p>You've received a voucher for a SWEDISH MASSAGE.</p>
+            <p>Click <span class="popup-link" onclick="redeemVoucher()">here</span> to redeem your voucher.</p>
+        </div>
+    </div>
 </div>
 
 
 <script>
     function openEnvelope() {
-    var envelope = document.getElementById("envelope");
-    envelope.style.display = "none";
-    document.getElementById("second-envelope").style.display = "inline-block";
-    document.getElementById("letter").style.display = "block";
-    document.getElementById("open-button").style.display = "none";
-    // window.addEventListener("scroll", revealGift);
+        var envelope = document.getElementById("envelope");
+        envelope.style.display = "none";
+        document.getElementById("second-envelope").style.display = "inline-block";
+        document.getElementById("letter").style.display = "block";
+        document.getElementById("open-button").style.display = "none";
         
-    // Check if scrolled to the end of the page
-    var scrollPosition = window.scrollY;
-    var totalHeight = document.body.scrollHeight;
-    var windowHeight = window.innerHeight;
-    if (scrollPosition + windowHeight >= totalHeight) {
-        revealGift();
-    }
+        // Change container styles
+        var container = document.querySelector('.container');
+        container.style.backgroundColor = 'transparent';
+        container.style.border = 'none';
+        container.style.boxShadow = 'none';
         
-    // Change container styles
-    var container = document.querySelector('.container');
-    container.style.backgroundColor = 'transparent';
-    container.style.border = 'none';
-    container.style.boxShadow = 'none';
-
-        
-}
-    function revealGift() {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            alert("Congratulations! You've reached the end. You've received a voucher for a SWEDISH MASSAGE.");
-            window.removeEventListener("scroll", revealGift);
+        // Check if scrolled to the end of the page
+        var scrollPosition = window.scrollY;
+        var totalHeight = document.body.scrollHeight;
+        var windowHeight = window.innerHeight;
+        if (scrollPosition + windowHeight >= totalHeight) {
+            revealGift();
         }
     }
-</script>
+
+    function revealGift() {
+        var overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+    }
+
+    function redeemVoucher() {
+        window.location.href = "https://shapedsecretz.com/massage-services/";
+    }
 
 </body>
 </html>
