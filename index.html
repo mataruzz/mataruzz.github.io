@@ -13,11 +13,11 @@
             align-items: center;
             padding: 0;
             background-color: #f0f0f0;
-            height: 100vh; /* Adjusted */
+/*             height: 100vh; /* Adjusted */ */
         }
         .container {
-            margin-top: 50px;
-            width: 80%; 
+            margin-top: 5px;
+            width: auto; 
             background-color: white;
             border: 2px solid #ccc;
             border-radius: 10px;
@@ -41,6 +41,10 @@
             height: auto;
             display: none; /* Adjusted */
             margin: 0 auto; /* Added */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         #letter {
             text-align: justify;
@@ -148,7 +152,8 @@
         document.getElementById("open-button").style.display = "none";
         // Change container styles
         var container = document.querySelector('.container');
-        container.style.backgroundColor = 'transparent';
+        container.style.backgroundColor = 'transparent';        
+        container.style.width= '50%';
         container.style.border = 'none';
         container.style.boxShadow = 'none';
     }
