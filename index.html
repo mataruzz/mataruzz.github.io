@@ -13,60 +13,34 @@
             align-items: center;
             padding: 0;
             background-color: #f0f0f0;
+            height: 100vh; /* Adjusted */
         }
         .container {
-/*             display: block; */
-            justify-content: center; /* Horizontally center the content */
-            align-items: center; /* Vertically center the content */
             margin-top: 50px;
             width: auto; 
-            height: 170px;
             background-color: white;
             border: 2px solid #ccc;
             border-radius: 10px;
             padding: 20px;
+            text-align: center; /* Adjusted */
         }
-        .sign{
+        .sign {
             text-align: right;
             font-family: serif;
             font-size: 30px;
             font-style: italic;
         }
-        .right-image1{
-            position: absolute;
-            top: 20px; /* Adjust top position as needed */
-            right: 20px; /* Adjust right position as needed */
-        }
         #envelope {
-            width: 200;
+            width: 200px;
             height: auto;
+            display: block; /* Added */
+            margin: 0 auto; /* Added */
         }
         #second-envelope {
             width: 200px;
             height: auto;
-        }
-        .hidden {
-            opacity: 0;
-        }
-        .date {
-        text-align: right;
-        }
-        .dear {
-        text-align: left;
-        }
-        .center {
-            text-align: center;
-            //display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #center-letter {
-            text-align: center;
-/*             display: none; */
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            
+            display: none; /* Adjusted */
+            margin: 0 auto; /* Added */
         }
         #letter {
             text-align: justify;
@@ -77,6 +51,7 @@
             border-radius: 10px;
             font-family: Georgia, serif;
             width: 80%;
+            margin: 0 auto; /* Added */
         }
         #reveal-button {
             background-color: red; /* Red */
@@ -97,10 +72,6 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            position: absolute;
-            top: 185px;
-            left: 50%;
-            transform: translateX(-50%);
             margin-top: 20px;
         }
         .overlay {
@@ -137,121 +108,30 @@
             width: 20px;
             cursor: pointer;
         }
-        
-        #image-container {
-            display: flex;
-            align-items: center;
-        }
-
-        #right-img {
-            width: 100px; /* Adjust the width as needed */
-            height: auto; /* Maintain aspect ratio */
-        }
     </style>
 </head>
 <body>
-
-
 <div class="container">
-    <div class="center">
-        <img src="./Picture2.png" alt="Envelope" id="envelope">
-    </div>
+    <img src="./Picture2.png" alt="Envelope" id="envelope">
     <div id="letter" style="display: none;">
-        <div class="center">
-            <img src="./Picture1.png" alt="Envelope" id="second-envelope">
-        </div>
-        <div class="date">
-            March 23, 2024
-        </div>
+        <img src="./Picture1.png" alt="Envelope" id="second-envelope">
+        <div class="date">March 23, 2024</div>
         <br>
         <br>
-        <div class="dear">
-            My dear Pepita,
-        </div>
-        <p>
-            Today marks a very special day for me... exactly 29 years ago, a beautiful baby girl was born in Spain! Her name was Irini lol no, I’m kidding, her name was Irene. The name itself held the promise of a princess, and as the years passed, she only grew more beautiful and intelligent. She was truly remarkable. Irene's intellect stood out, leading her to study abroad and win a scholarship in the USA. There was simply no competition; she was the most charming and intelligent girl in the world, though she might not have realized it at the time. Regrettably, guys, at that time I was still a little boy only looking for videogames and skateboard. But that... that's a story for another time.
-        </p>
-        <p>
-            Now, where was I? Ah, yes, Irene's remarkable intelligence and attractiveness. She ventured to Pittsburgh for college, delving into mechanical studies and further enhancing her knowledge. It wasn't easy; she was far from home, in a foreign land. Despite the distance from home and the unfamiliarity of her surroundings, she thrived, emerging as the top student in her class. While others tried to follow in her footsteps, none could match her unparalleled excellence. After college, Irene set her sights on remaining in the USA, seeking warmer climes than the cold she had known. Her determination was incredible as she pursued opportunities in California. So, she started looking for a job in California. She was so determined that no one could have stopped her. She knew what she wanted… and she get it! Yes, because that’s what she is, determined. After that, Irene refined her job skills by working in different companies, always getting better. Now, she's a clever, independent woman, beautiful inside and out, and she owns her own home.
-        </p>
-        <p>
-            You may be thinking, "Is he describing my life? WTF?" And you're right. However, what you might not always recognize are the small steps, sacrifices, and hard work you've put in to reach where you are today. You've worked tirelessly, and it's thanks to your strength and determination that you've accomplished all you desired. Allow me to remind you of your incredible resilience and assure you that there's nothing beyond your reach. This day holds immense significance for me because it marks the day you were born. Without you, my life wouldn't be as vibrant and joyful. You've shown me that anything is possible; we hold the power to achieve our desires. The key is to never give up and learn from our mistakes. I am incredibly grateful to have you in my life.
-        </p>
-        <p>
-            You are STRONG, BEAUTIFUL AND SEXY, INDEPENDENT, SMART, DETERMINED, POSITIVE, FUN, A GOOD TEAM PLAYER AND MORE THAN ANYTHING ELSE YOU ARE LOYAL AND LOVING.
-        </p>
-        <p>
-            I cannot wait to live together, just me and you. Sleeping together every night (just one finger touching tho LOL) and share every day. Cooking together, going out, have fun, travel surfing and do sports 😉 That is exactly how I imagine my life with you. Us as team-player, lover and best friend. I apologize if I get cranky at time. I care about you so much that I cannot either handle the simple thought of having a life not with you. I don’t want to loose you, because together we are uneatable! We make each other stronger and… we become much more athletic, if you know what I mean! I love you my little sweetheart. I LOVE YOU SO MUCH! Happy birthday <3 and have a great weekend in the mounting.
-        </p>
+        <div class="dear">My dear Pepita,</div>
+        <p>Today marks a very special day.</p>
+        <p>I cannot wait to...</p>
         <br>
-        <div class="date">
-         Your guapito,
-        </div>
-         <div class="sign">
-         Alvin
-        </div>
-        
-        <div class="center">
-            <button id="reveal-button" onclick="revealGift()">Click to reveal your gift</button>
-        </div>
+        <div class="date">Your guapito,</div>
+        <div class="sign">Alvin</div>
+        <button id="reveal-button" onclick="revealGift()">Click to reveal your gift</button>
     </div>
     <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
 </div>
-
 <div class="overlay" id="overlay">
     <div class="popup">
         <span class="popup-close" onclick="hidePopup()">&times;</span>
         <div class="popup-content">
             <p>Congratulations! You've reached the end.</p>
-            <p>You've received a voucher for a 60 min SWEDISH MASSAGE.</p>            
-            <p>Send me a message about the day and time you wanna book, and I'll do for you.</p>
-            <p>To check availabilities, <span class="popup-link" onclick="redeemVoucher()">click here</span>.</p>
-        </div>
-    </div>
-</div>
-
-<script>
-    function openEnvelope() {
-        var envelope = document.getElementById("envelope");
-        envelope.style.display = "none";
-        document.getElementById("second-envelope").style.display = "inline-block";
-        document.getElementById("letter").style.display = "block";
-        document.getElementById("open-button").style.display = "none";
-        // document.getElementById('image-container').style.display = 'block';
-
-        // var letterElement = document.getElementById("letter");
-        // letterElement.style.position = "absolute";
-        // letterElement.style.top = "50%";
-        // letterElement.style.left = "50%";
-        
-        // Change container styles
-        var container = document.querySelector('.container');
-        container.style.backgroundColor = 'transparent';
-        container.style.border = 'none';
-        container.style.boxShadow = 'none';
-    }
-
-    function revealGift() {
-        var letter = document.getElementById('letter');
-        letter.style.display = 'block';
-        showPopup(); // Call the function directly to show the popup
-    }
-
-    function showPopup() {
-        var overlay = document.getElementById('overlay');
-        overlay.style.display = 'flex';
-    }
-
-    function hidePopup() {
-        var overlay = document.getElementById('overlay');
-        overlay.style.display = 'none';
-    }
-
-    function redeemVoucher() {
-        window.location.href = "https://shapedsecretz.com/massage-services/";
-    }
-</script>
-
-
-</body>
-</html>
+            <p>You've received a voucher for a 60 min SWEDISH MASSAGE.</p>
+            <p>Send me a message about the day and
