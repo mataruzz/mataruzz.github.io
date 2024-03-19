@@ -116,8 +116,9 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            width: 20px;
+            width: 30px;
             cursor: pointer;
+            font-size: 30px; /* Increased font size */
         }
     </style>
 </head>
@@ -137,9 +138,9 @@
         <br>
         <div class="date">Your guapito,</div>
         <div class="sign">Alvin</div>
-        <div class="center">
-            <button id="reveal-button" onclick="revealGift()">Click to reveal your gift</button>    
-        </div>
+<!--         <div class="center"> -->
+        <button id="reveal-button" onclick="revealGift()" style="margin-top: 20px; style="justify-content: center;">Click to reveal your gift</button>    
+<!--         </div> -->
     </div>
     <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
 </div>
