@@ -172,6 +172,9 @@
             <button id="reveal-button" onclick="revealGift()">Click to reveal your gift</button>
         </div>
     </div>
+    <div id="image-container" style="display: none;">
+        <img src="./Picture2.png" alt="Image" id="11">
+    </div>
     <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
 </div>
 
@@ -194,6 +197,7 @@
         document.getElementById("second-envelope").style.display = "inline-block";
         document.getElementById("letter").style.display = "block";
         document.getElementById("open-button").style.display = "none";
+        document.getElementById('image-container').style.display = 'block';
         
         // Change container styles
         var container = document.querySelector('.container');
