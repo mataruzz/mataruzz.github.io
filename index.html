@@ -34,10 +34,10 @@
             text-align: center;
         }
        .date {
-        text-align: right;
+            text-align: right;
         }
         .dear {
-        text-align: left;
+            text-align: left;
         }
         #envelope {
             width: 200px;
@@ -70,8 +70,6 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 20px;
-            position: absolute;
-            left: 50%;
         }
         #reveal-button:hover {
             background-color: darkred; /* Darker red on hover */
@@ -138,9 +136,9 @@
         <br>
         <div class="date">Your guapito,</div>
         <div class="sign">Alvin</div>
-<!--         <div class="center"> -->
-        <button id="reveal-button" onclick="revealGift()" style="margin-top: 20px;" style="justify-content: center;">Click to reveal your gift</button>    
-<!--         </div> -->
+        <div class="center">
+            <button id="reveal-button" onclick="revealGift()">Click to reveal your gift</button>    
+        </div>
     </div>
     <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
 </div>
