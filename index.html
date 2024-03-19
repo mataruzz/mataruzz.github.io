@@ -137,12 +137,12 @@
             cursor: pointer;
         }
         
-        .image-container {
+        #image-container {
             display: flex;
             align-items: center;
         }
 
-        #11 {
+        #right-img {
             width: 100px; /* Adjust the width as needed */
             height: auto; /* Maintain aspect ratio */
         }
@@ -195,7 +195,7 @@
         </div>
     </div>
 <!--     <div id="image-container" style="display: none;">
-        <img src="./Picture2.png" alt="Image" id="11">
+        <img src="./Picture2.png" alt="Image" id="right-img">
     </div> -->
     <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
 </div>
@@ -219,9 +219,9 @@
         document.getElementById("second-envelope").style.display = "inline-block";
         document.getElementById("letter").style.display = "block";
         document.getElementById("open-button").style.display = "none";
-        document.getElementById('image-container').style.display = 'block';
+        // document.getElementById('image-container').style.display = 'block';
 
-        var letterElement = document.getElementById("letter");
+        // var letterElement = document.getElementById("letter");
         // letterElement.style.position = "absolute";
         // letterElement.style.top = "50%";
         // letterElement.style.left = "50%";
