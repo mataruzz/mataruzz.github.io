@@ -134,4 +134,44 @@
         <div class="popup-content">
             <p>Congratulations! You've reached the end.</p>
             <p>You've received a voucher for a 60 min SWEDISH MASSAGE.</p>
-            <p>Send me a message about the day and
+            <p>Send me a message about the day and time you wanna book, and I'll do for you.</p>
+            <p>To check availabilities, <span class="popup-link" onclick="redeemVoucher()">click here</span>.</p>
+        </div>
+    </div>
+</div>
+<script>
+    function openEnvelope() {
+        var envelope = document.getElementById("envelope");
+        envelope.style.display = "none";
+        document.getElementById("second-envelope").style.display = "inline-block";
+        document.getElementById("letter").style.display = "block";
+        document.getElementById("open-button").style.display = "none";
+        // Change container styles
+        var container = document.querySelector('.container');
+        container.style.backgroundColor = 'transparent';
+        container.style.border = 'none';
+        container.style.boxShadow = 'none';
+    }
+
+    function revealGift() {
+        var letter = document.getElementById('letter');
+        letter.style.display = 'block';
+        showPopup(); // Call the function directly to show the popup
+    }
+
+    function showPopup() {
+        var overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+    }
+
+    function hidePopup() {
+        var overlay = document.getElementById('overlay');
+        overlay.style.display = 'none';
+    }
+
+    function redeemVoucher() {
+        window.location.href = "https://shapedsecretz.com/massage-services/";
+    }
+</script>
+</body>
+</html>
