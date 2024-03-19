@@ -147,7 +147,6 @@
     <div class="center">
         <img src="./Picture2.png" alt="Envelope" id="envelope">
     </div>
-    <div class="center">
     <div id="letter" style="display: none;">
         <div class="center">
             <img src="./Picture1.png" alt="Envelope" id="second-envelope">
@@ -190,7 +189,6 @@
 <!--     <div id="image-container" style="display: none;">
         <img src="./Picture2.png" alt="Image" id="11">
     </div> -->
-    </div>
     <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
 </div>
 
@@ -211,7 +209,7 @@
         var envelope = document.getElementById("envelope");
         envelope.style.display = "none";
         document.getElementById("second-envelope").style.display = "inline-block";
-        document.getElementById("letter").style.display = "block";
+        document.getElementById("letter").style.display = "flex";
         document.getElementById("open-button").style.display = "none";
         document.getElementById('image-container').style.display = 'block';
         
