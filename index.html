@@ -85,6 +85,13 @@
             cursor: pointer;
             margin-top: 20px;
         }
+        # right-img {
+            position: fixed; /* or position: absolute; */
+            top: 50%; /* Adjust as per your layout */
+            right: 20px; /* Adjust as per your layout */
+            transform: translateY(-50%); /* Center vertically */
+/*             z-index: 999; /* Ensure it's above other content */ */
+        }
         .overlay {
             position: fixed;
             top: 0;
@@ -123,6 +130,14 @@
     </style>
 </head>
 <body>
+
+<audio id="endlessSound" loop>
+  <source src="barradeen-bedtime-after-a-coffee(chosic.com).mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+    
+<img src="Picture1.png" alt="HELLO" id="right-img">
+    
 <div class="container">
     <img src="./Picture2.png" alt="Envelope" id="envelope">
     <div id="letter" style="display: none;">
@@ -177,6 +192,10 @@
 <script>
     var sound = new Audio('handle-paper-foley-1-172688.mp3');
     var win = new Audio('mixkit-ethereal-fairy-win-sound-2019.wav');
+
+    window.onload = function() {
+    document.getElementById('endlessSound').play();
+    };    
     
     function openEnvelope() {
         sound.currentTime = 0; // Reset audio to start        
