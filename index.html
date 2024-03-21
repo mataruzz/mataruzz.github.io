@@ -176,6 +176,9 @@
 </div>
 <script>
     function openEnvelope() {
+        var sound = new Audio('handle-paper-foley-1-172688.mp3');
+        sound.play();
+        
         var envelope = document.getElementById("envelope");
         envelope.style.display = "none";
         document.getElementById("second-envelope").style.display = "inline-block";
