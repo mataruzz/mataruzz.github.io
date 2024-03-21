@@ -40,7 +40,7 @@
             text-align: left;
         }
         #envelope {
-            width: 70%;
+            width: 90%;
             max-width: 200px;
             height: auto;
             display: block; /* Added */
@@ -175,8 +175,10 @@
     </div>
 </div>
 <script>
+    var sound = new Audio('handle-paper-foley-1-172688.mp3');
+    
     function openEnvelope() {
-        var sound = new Audio('handle-paper-foley-1-172688.mp3');
+        sound.currentTime = 0; // Reset audio to start        
         sound.play();
         
         var envelope = document.getElementById("envelope");
