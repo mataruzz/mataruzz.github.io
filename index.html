@@ -85,25 +85,35 @@
             cursor: pointer;
             margin-top: 20px;
         }
-        #right-img {
+        #right-img1 {
             display: none;
+            width: 90%; 
+            max-width: 50px;
             position: fixed; /* or position: absolute; */
-            top: 50%; /* Adjust as per your layout */
+            top: 10%; /* Adjust as per your layout */
             right: 20px; /* Adjust as per your layout */
             transform: translateY(-50%); /* Center vertically */
             z-index: 999; /* Ensure it's above other content */
         }
-        #right-img-container {
-            position: fixed;
-            top: 50%; /* Adjust as per your layout */
-            right: 20px; /* Adjust as per your layout */
-            transform: translateY(-50%); /* Center vertically */
-            z-index: 999; /* Ensure it's above other content */
-        }
-        
-        #right-img-container img {
+        #right-img2 {
             display: none;
-            margin-bottom: 10px; /* Adjust spacing between images */
+            width: 90%; 
+            max-width: 50px;
+            position: fixed; /* or position: absolute; */
+            top: 40%; /* Adjust as per your layout */
+            right: 20px; /* Adjust as per your layout */
+            transform: translateY(-50%); /* Center vertically */
+            z-index: 999; /* Ensure it's above other content */
+        }
+        #right-img3 {
+            display: none;
+            width: 90%; 
+            max-width: 50px;
+            position: fixed; /* or position: absolute; */
+            top: 75%; /* Adjust as per your layout */
+            right: 20px; /* Adjust as per your layout */
+            transform: translateY(-50%); /* Center vertically */
+            z-index: 999; /* Ensure it's above other content */
         }
         .overlay {
             position: fixed;
@@ -144,12 +154,10 @@
 </head>
 <body>
    
-<!-- <img src="Picture1.png" alt="HELLO" id="right-img"> -->
-<div id="right-img-container">
-    <img src="./Picture1.png" alt="Image 1">
-    <img src="./Picture1.png" alt="Image 2">
-    <!-- Add more img tags for additional images -->
-</div>
+<img src="Picture1.png" alt="HELLO" id="right-img1">
+<img src="Picture1.png" alt="HELLO" id="right-img2">
+<img src="Picture1.png" alt="HELLO" id="right-img3">
+
 <div class="container">
     <img src="./Picture2.png" alt="Envelope" id="envelope">
     <div id="letter" style="display: none;">
@@ -222,13 +230,13 @@
         sound.currentTime = 0; // Reset audio to start        
         sound.play();
 
-        // var rightImg = document.getElementById("right-img");
-        // rightImg.style.display = "block"; // Show the image
-        var rightImgs = document.getElementById("right-img-container");
-        var images = container.querySelectorAll('img');
-        images.forEach(function(img) {
-            img.style.display = 'block';
-        });
+        var rightImg1 = document.getElementById("right-img1");
+        rightImg1.style.display = "block"; // Show the image
+        var rightImg2 = document.getElementById("right-img2");
+        rightImg2.style.display = "block"; // Show the image
+        var rightImg3 = document.getElementById("right-img3");
+        rightImg3.style.display = "block"; // Show the image
+
         
         var envelope = document.getElementById("envelope");
         envelope.style.display = "none";
