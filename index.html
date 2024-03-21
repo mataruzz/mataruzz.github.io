@@ -85,42 +85,13 @@
             cursor: pointer;
             margin-top: 20px;
         }
-        #right-img1 {
-            display: none;
-            width: 90%; 
-            max-width: 50px;
-            position: fixed; /* or position: absolute; */
-            top: 10%; /* Adjust as per your layout */
-            right: 20px; /* Adjust as per your layout */
-            transform: translateY(-50%); /* Center vertically */
-            z-index: 999; /* Ensure it's above other content */
-        }
-        #right-img2 {
-            display: none;
-            width: 90%; 
-            max-width: 50px;
-            position: fixed; /* or position: absolute; */
-            top: 40%; /* Adjust as per your layout */
-            right: 20px; /* Adjust as per your layout */
-            transform: translateY(-50%); /* Center vertically */
-            z-index: 999; /* Ensure it's above other content */
-        }
-        #right-img3 {
-            display: none;
-            width: 90%; 
-            max-width: 50px;
-            position: fixed; /* or position: absolute; */
-            top: 75%; /* Adjust as per your layout */
-            right: 20px; /* Adjust as per your layout */
-            transform: translateY(-50%); /* Center vertically */
-            z-index: 999; /* Ensure it's above other content */
-        }
         .left-images {
             width: 50%; 
             max-width: 50px;
             position: fixed; 
             top: 10%; 
             left: 20px; 
+            text-align: center;
             transform: translateY(-50%);
             z-index: 999; 
             display: none; /* Initially hidden */
@@ -131,6 +102,7 @@
             position: fixed; 
             top: 10%; 
             right: 20px; 
+            text-align: center;
             transform: translateY(-50%);
             z-index: 999; 
             display: none; /* Initially hidden */
@@ -138,8 +110,8 @@
         
         .left-images img,
         .right-images img {
-            width: 10%; 
-            max-width: 50px;
+            width: 30%; 
+/*             max-width: 50px; */
             height: auto; /* Maintain aspect ratio */
         }
         
