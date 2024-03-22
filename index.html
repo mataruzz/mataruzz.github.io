@@ -289,7 +289,7 @@
         var envelope = document.getElementById("envelope");
         envelope.style.display = "none";
         document.getElementById("second-envelope").style.display = "inline-block";
-        document.getElementById("letter").style.display = "block";
+        var letterContainer = document.getElementById("letter").style.display = "block";
         document.getElementById("open-button").style.display = "none";
         // Change container styles
         var container = document.querySelector('.container');
@@ -329,13 +329,13 @@
         //     while (!firstImg.complete) {};
             // imgHeight = firstImg.height;
             var imgHeight = leftImageContainer.offsetWidth*1.25;
-            var numImages = Math.floor(container.offsetHeight / imgHeight);
+            var numImages = Math.floor((letterContainer.offsetHeight - 5/100*letterContainer.offsetHeight) / imgHeight);
         
             // Create and append the remaining images
             var j = 0;
             for (var i = 0; i < numImages; i++) {
-                leftImageNumber = (i % 8) + 1; // Calculate image number for left container from 1 to 8, and repeat
-                rightImageNumber = (j % 14) + 8; // Calculate image number for right container from 8 to 21, and repeat
+                leftImageNumber = (i % 7) + 1; // Calculate image number for left container from 1 to 8, and repeat
+                rightImageNumber = (j % 7) + 7; // Calculate image number for right container from 8 to 21, and repeat
                 createAndAppendImages(leftImageContainer, leftImageNumber, 'LeftImage');
                 createAndAppendImages(rightImageContainer, rightImageNumber, 'RightImage');
                 j++;
