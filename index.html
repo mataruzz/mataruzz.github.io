@@ -127,7 +127,7 @@
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
+            display: none;
             font-size: 16px;
             border-radius: 8px;
             cursor: pointer;
@@ -328,38 +328,21 @@
         
         // Calculate the height of the page
         var pageHeight = document.body.scrollHeight;
-        
         // Get the container where images will be appended
         var leftImageContainer = document.querySelector('.left-images');
         var rightImageContainer = document.querySelector('.right-images');
-        
-        // Initialize image numbers for left and right containers
-        // var leftImageNumber = 1;
-
-        // // Create and append the initial images
-        // createAndAppendImages(leftImageContainer, leftImageNumber, 'LeftImage');
-
-        // // Calculate the number of additional images needed to fill the page height
-        // var imgHeight = 150; // Initialize the height variable
-
-        // Wait for the first image to load and then get its height
-        // var firstImg = document.querySelector('.left-images img');
-        // firstImg.onload = function() {
-        //     while (!firstImg.complete) {};
-            // imgHeight = firstImg.height;
-            var imgHeight = leftImageContainer.offsetWidth*1.25;
-            var numImages = Math.floor((letterContainer.offsetHeight - (5/100)*letterContainer.offsetHeight) / imgHeight) - 2;
-        
-            // Create and append the remaining images
-            var j = 0;
-            for (var i = 0; i < numImages; i++) {
-                leftImageNumber = (i % 7) + 1; // Calculate image number for left container from 1 to 8, and repeat
-                rightImageNumber = (j % 7) + 7; // Calculate image number for right container from 8 to 21, and repeat
-                createAndAppendImages(leftImageContainer, leftImageNumber, 'LeftImage');
-                createAndAppendImages(rightImageContainer, rightImageNumber, 'RightImage');
-                j++;
-            }
-        // }
+        var imgHeight = leftImageContainer.offsetWidth*1.25;
+        var numImages = Math.floor((letterContainer.offsetHeight - (5/100)*letterContainer.offsetHeight) / imgHeight) - 2;
+    
+        // Create and append the remaining images
+        var j = 0;
+        for (var i = 0; i < numImages; i++) {
+            leftImageNumber = (i % 7) + 1; // Calculate image number for left container from 1 to 8, and repeat
+            rightImageNumber = (j % 7) + 7; // Calculate image number for right container from 8 to 21, and repeat
+            createAndAppendImages(leftImageContainer, leftImageNumber, 'LeftImage');
+            createAndAppendImages(rightImageContainer, rightImageNumber, 'RightImage');
+            j++;
+        }
     }
 
     function revealGift() {
@@ -369,11 +352,6 @@
         setTimeout(function() {
             document.getElementById('giftButton').style.display = 'block'; // Show the button after 4 seconds
         }, 4000);
-        // setTimeout(function() {
-            // Hide the joke pop-up after 4 seconds
-        //     showPopup(); // Show the final pop-up
-        // }, 4000);
-        // showPopup(); // Call the function directly to show the popup
     }
 
     function showPopup() {
