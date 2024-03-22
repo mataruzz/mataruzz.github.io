@@ -312,6 +312,7 @@
             var imgRight = document.createElement('img');
             var leftImageNumber = (i % 8) + 1; // Calculate image number from 1 to 10, and repeat
             var rightImageNumber = (j % 14) + 8;
+            console.log(leftImageNumber, rightImageNumber);
             img.src = './images/' + leftImageNumber + '-Photoroom.png-Photoroom.png'; // Replace 'your-image-url-' with your image URL prefix
             imgRight.src = './images/' + rightImageNumber + '-Photoroom.png-Photoroom.png'; // Replace 'your-image-url-' with your image URL prefix
             img.alt = 'LeftImage' + (i + 1); // Set alt text for accessibility
