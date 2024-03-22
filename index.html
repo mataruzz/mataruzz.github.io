@@ -285,13 +285,13 @@
         var envelope = document.getElementById("envelope");
         envelope.style.display = "none";
         document.getElementById("second-envelope").style.display = "inline-block";
-        document.getElementById("letter").style.display = "block";
+        document.getElementById("letter").style.display = "flex";
         document.getElementById("open-button").style.display = "none";
         // Change container styles
         var container = document.querySelector('.container');
         container.style.backgroundColor = 'transparent';    
         container.style.flex = '1'; /* This line is added */
-        container.style.display = 'block';
+        container.style.display = 'flex';
         container.style.flexDirection = 'column';
         container.style.justifyContent = 'center';
         container.style.alignItems = 'center';
