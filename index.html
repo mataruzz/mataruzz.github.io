@@ -320,8 +320,8 @@
         leftImageContainer.appendChild(img);
         rightImageContainer.appendChild(imgRight);
         j = j+1;
-        
         var numImages = Math.floor(pageHeight / img.height);
+        console.log(numImages, img.height);
         for (var i = 1; i < numImages; i++) {
             var img = document.createElement('img');
             var imgRight = document.createElement('img');
