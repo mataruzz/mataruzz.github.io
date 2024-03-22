@@ -95,6 +95,7 @@
             max-width: 80px;
             position: fixed; 
             top: 20%; 
+            overflow-y: auto;    
             left: 20px; 
             text-align: center;
             transform: translateY(-50%);
@@ -108,6 +109,7 @@
             max-width: 80px;
             position: fixed; 
             top: 20%; 
+            overflow-y: auto;
             right: 20px; 
             text-align: center;
             transform: translateY(-50%);
@@ -273,8 +275,8 @@
         sound.currentTime = 0; // Reset audio to start        
         sound.play();
 
-        document.querySelector('.left-images').style.display = 'block';
-        document.querySelector('.right-images').style.display = 'block';
+        document.querySelector('.left-images').style.display = 'flex';
+        document.querySelector('.right-images').style.display = 'flex';
 
         
         var envelope = document.getElementById("envelope");
@@ -285,6 +287,7 @@
         // Change container styles
         var container = document.querySelector('.container');
         container.style.backgroundColor = 'transparent';    
+        container.style.flex = '1'; /* This line is added */
         container.style.display = 'flex';
         container.style.flexDirection = 'column';
         container.style.justifyContent = 'center';
