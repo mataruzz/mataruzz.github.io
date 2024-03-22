@@ -125,7 +125,7 @@
         
         .left-images img,
         .right-images img {
-            width: 70%; 
+            width: 100%; 
 /*             max-width: 50px; */
             height: auto; /* Maintain aspect ratio */
             margin: 20px auto;
@@ -329,7 +329,7 @@
         //     while (!firstImg.complete) {};
             // imgHeight = firstImg.height;
             var imgHeight = leftImageContainer.offsetWidth*1.25;
-            var numImages = Math.floor(pageHeight / imgHeight);
+            var numImages = Math.floor(container.offsetHeight / imgHeight);
         
             // Create and append the remaining images
             var j = 0;
