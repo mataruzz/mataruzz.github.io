@@ -244,6 +244,14 @@
         <img src="./images/funny_me-Photoroom.png-Photoroom.png" class="fixed">
     </div>
 </div>
+
+<div id="jokeOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; z-index: 999;">
+    <div style="background-color: #fff; padding: 20px; border-radius: 10px; text-align: center;">
+        <img src="./images/funny_me-Photoroom.png-Photoroom.png" style="width: 40%; height: auto; margin-bottom: 10px;" >
+        <h2>I'm your gift mi lover &lt;3</h2>
+        <button onclick="showFinalPopup()">I WANT MY GIFT!</button>
+    </div>
+</div>
     
 <div class="overlay" id="overlay">
     <div class="popup">
@@ -357,13 +365,11 @@
         var letter = document.getElementById('letter');
         letter.style.display = 'block';
         showJokePopup(); // Call the joke pop-up function first
-        setTimeout(function() {
-            document.getElementById('jokeOverlay').style.display = 'none'; // Hide the joke pop-up after 4 seconds
-            showPopup(); // Show the final pop-up
-        }, 4000);
+        // setTimeout(function() {
+            // Hide the joke pop-up after 4 seconds
+        //     showPopup(); // Show the final pop-up
+        // }, 4000);
         // showPopup(); // Call the function directly to show the popup
-        win.currentTime = 0; // Reset audio to start        
-        win.play();
     }
 
     function showPopup() {
@@ -374,6 +380,13 @@
     function showJokePopup() {
         var jokeOverlay = document.getElementById('jokeOverlay');
         jokeOverlay.style.display = 'flex';
+    }
+
+    function showFinalPopup() {
+        document.getElementById('jokeOverlay').style.display = 'none'; 
+        showPopup(); // Show the final pop-up
+        win.currentTime = 0; // Reset audio to start        
+        win.play();
     }
 
     function hidePopup() {
