@@ -269,9 +269,9 @@
     // Function to create and append images
     function createAndAppendImages(container, imageNumber, altPrefix) {
         var img = document.createElement('img');
-        img.onload = function() {
-            console.log("Image height:", img.height); // Log the height of the image after it's loaded
-        };
+        // img.onload = function() {
+        //     console.log("Image height:", img.height); // Log the height of the image after it's loaded
+        // };
         img.src = './images/' + imageNumber + '-Photoroom.png-Photoroom.png';
         img.alt = altPrefix + imageNumber;
         img.style.height = 'auto';
@@ -315,32 +315,32 @@
         var rightImageContainer = document.querySelector('.right-images');
         
         // Initialize image numbers for left and right containers
-        var leftImageNumber = 1;
+        // var leftImageNumber = 1;
 
-        // Create and append the initial images
-        createAndAppendImages(leftImageContainer, leftImageNumber, 'LeftImage');
+        // // Create and append the initial images
+        // createAndAppendImages(leftImageContainer, leftImageNumber, 'LeftImage');
 
-        // Calculate the number of additional images needed to fill the page height
-        var imgHeight = 150; // Initialize the height variable
+        // // Calculate the number of additional images needed to fill the page height
+        // var imgHeight = 150; // Initialize the height variable
 
         // Wait for the first image to load and then get its height
-        var firstImg = document.querySelector('.left-images img');
-        firstImg.onload = function() {
-            while (!firstImg.complete) {};
-            imgHeight = firstImg.height;
-        
+        // var firstImg = document.querySelector('.left-images img');
+        // firstImg.onload = function() {
+        //     while (!firstImg.complete) {};
+            // imgHeight = firstImg.height;
+            var imgHeight = container.offsetWidth*1.25;
             var numImages = Math.floor(pageHeight / imgHeight);
         
             // Create and append the remaining images
-            var j = 1;
-            for (var i = 1; i < numImages; i++) {
+            var j = 0;
+            for (var i = 0; i < numImages; i++) {
                 leftImageNumber = (i % 8) + 1; // Calculate image number for left container from 1 to 8, and repeat
                 rightImageNumber = (j % 14) + 8; // Calculate image number for right container from 8 to 21, and repeat
                 createAndAppendImages(leftImageContainer, leftImageNumber, 'LeftImage');
                 createAndAppendImages(rightImageContainer, rightImageNumber, 'RightImage');
                 j++;
             }
-        }
+        // }
     }
 
     function revealGift() {
