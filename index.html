@@ -326,6 +326,7 @@
         // Wait for the first image to load and then get its height
         var firstImg = document.querySelector('.left-images img');
         firstImg.onload = function() {
+            while (!firstImg.complete) {};
             imgHeight = firstImg.height;
         
             var numImages = Math.floor(pageHeight / imgHeight);
