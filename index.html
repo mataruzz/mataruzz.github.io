@@ -240,6 +240,9 @@
     <div style="background-color: #fff; padding: 20px; border-radius: 10px; text-align: center;">
         <h2>I'm your gift mi lover &lt;3</h2>
     </div>
+    <div class='center'>
+        <img src="./images/funny_me-Photoroom.png-Photoroom.png" class="fixed">
+    </div>
 </div>
     
 <div class="overlay" id="overlay">
@@ -336,7 +339,7 @@
         //     while (!firstImg.complete) {};
             // imgHeight = firstImg.height;
             var imgHeight = leftImageContainer.offsetWidth*1.25;
-            var numImages = Math.floor((letterContainer.offsetHeight - (5/100)*letterContainer.offsetHeight) / imgHeight) - 1;
+            var numImages = Math.floor((letterContainer.offsetHeight - (5/100)*letterContainer.offsetHeight) / imgHeight) - 2;
         
             // Create and append the remaining images
             var j = 0;
@@ -355,7 +358,7 @@
         letter.style.display = 'block';
         showJokePopup(); // Call the joke pop-up function first
         setTimeout(function() {
-            hidePopup(); // Hide the joke pop-up after 4 seconds
+            document.getElementById('jokeOverlay').style.display = 'none'; // Hide the joke pop-up after 4 seconds
             showPopup(); // Show the final pop-up
         }, 4000);
         // showPopup(); // Call the function directly to show the popup
