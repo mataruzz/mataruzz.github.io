@@ -310,8 +310,8 @@
             var img = document.createElement('img');
             var imageNumber = (i % 10) + 1; // Calculate image number from 1 to 10, and repeat
             img.src = './images/' + imageNumber + '-Photoroom.png-Photoroom.png'; // Replace 'your-image-url-' with your image URL prefix
-            img.alt = 'LeftImage ' + (i + 1); // Set alt text for accessibility
-            img.style.height = imageHeight + 'px'; // Set the height of each image
+            img.alt = 'LeftImage' + (i + 1); // Set alt text for accessibility
+            img.style.height = 'auto'; // Set the height of each image
             leftImageContainer.appendChild(img);
         }
     }
