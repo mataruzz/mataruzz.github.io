@@ -254,18 +254,7 @@
     win.volume = 0.5;
     var backgroundSound = new Audio('barradeen-bedtime-after-a-coffee(chosic.com).mp3');
     backgroundSound.volume = 0.6;
-
-    // Calculate the height of the page
-    var pageHeight = document.body.scrollHeight;
     
-    // Determine the number of images needed to fill the height
-    var imageHeight = 200; // Adjusted height of each image
-    var numImages = Math.floor(pageHeight / imageHeight);
-    
-    // Get the container where images will be appended
-    var leftImageContainer = document.querySelector('.left-images');
-    
-   
     function playEndlessly() {
     // Play the preloaded sound effect
     backgroundSound.currentTime = 0; // Reset audio to start
@@ -305,6 +294,17 @@
         container.style.padding = '10px';
         playEndlessly();
 
+        // Calculate the height of the page
+        var pageHeight = document.body.scrollHeight;
+        
+        // Determine the number of images needed to fill the height
+        var imageHeight = 100; // Adjusted height of each image
+        var numImages = Math.floor(pageHeight / imageHeight);
+        console.log(numImages);
+        
+        // Get the container where images will be appended
+        var leftImageContainer = document.querySelector('.left-images');
+       
         // Create and append the necessary number of image elements
         for (var i = 0; i < numImages; i++) {
             var img = document.createElement('img');
