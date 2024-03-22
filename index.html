@@ -254,6 +254,17 @@
     win.volume = 0.5;
     var backgroundSound = new Audio('barradeen-bedtime-after-a-coffee(chosic.com).mp3');
     backgroundSound.volume = 0.6;
+
+    // Calculate the height of the page
+    var pageHeight = document.body.scrollHeight;
+    
+    // Determine the number of images needed to fill the height
+    var imageHeight = 200; // Adjusted height of each image
+    var numImages = Math.floor(pageHeight / imageHeight);
+    
+    // Get the container where images will be appended
+    var leftImageContainer = document.querySelector('.left-images');
+    
    
     function playEndlessly() {
     // Play the preloaded sound effect
@@ -293,21 +304,12 @@
         container.style.boxShadow = 'none';
         container.style.padding = '10px';
         playEndlessly();
-        // Calculate the height of the page
-        var pageHeight = document.body.scrollHeight;
-        
-        // Determine the number of images needed to fill the height
-        var imageHeight = 200; // Adjusted height of each image
-        var numImages = Math.ceil(pageHeight / imageHeight);
-        
-        // Get the container where images will be appended
-        var leftImageContainer = document.querySelector('.left-images');
-        
+
         // Create and append the necessary number of image elements
         for (var i = 0; i < numImages; i++) {
             var img = document.createElement('img');
             var imageNumber = (i % 10) + 1; // Calculate image number from 1 to 10, and repeat
-            img.src = imageNumber + '-Photoroom.png-Photoroom.png'; // Replace 'your-image-url-' with your image URL prefix
+            img.src = './images/' + imageNumber + '-Photoroom.png-Photoroom.png'; // Replace 'your-image-url-' with your image URL prefix
             img.alt = 'LeftImage ' + (i + 1); // Set alt text for accessibility
             img.style.height = imageHeight + 'px'; // Set the height of each image
             leftImageContainer.appendChild(img);
