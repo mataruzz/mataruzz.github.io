@@ -143,6 +143,7 @@
             align-items: center;
             z-index: 999;
         }
+        
         .popup {
             background-color: white;
             border-radius: 10px;
@@ -235,6 +236,11 @@
     </div>
 </div>
 
+<div id="jokeOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; z-index: 999;">
+    <div style="background-color: #fff; padding: 20px; border-radius: 10px; text-align: center;">
+        <h2>I'm your gift mi lover &lt;3</h2>
+    </div>
+</div>
     
 <div class="overlay" id="overlay">
     <div class="popup">
@@ -289,7 +295,8 @@
         var envelope = document.getElementById("envelope");
         envelope.style.display = "none";
         document.getElementById("second-envelope").style.display = "inline-block";
-        var letterContainer = document.getElementById("letter").style.display = "block";
+        var letterContainer = document.getElementById("letter");
+        letterContainer.style.display = "block";
         document.getElementById("open-button").style.display = "none";
         // Change container styles
         var container = document.querySelector('.container');
@@ -346,7 +353,12 @@
     function revealGift() {
         var letter = document.getElementById('letter');
         letter.style.display = 'block';
-        showPopup(); // Call the function directly to show the popup
+        showJokePopup(); // Call the joke pop-up function first
+        setTimeout(function() {
+            hidePopup(); // Hide the joke pop-up after 4 seconds
+            showPopup(); // Show the final pop-up
+        }, 4000);
+        // showPopup(); // Call the function directly to show the popup
         win.currentTime = 0; // Reset audio to start        
         win.play();
     }
@@ -354,6 +366,11 @@
     function showPopup() {
         var overlay = document.getElementById('overlay');
         overlay.style.display = 'flex';
+    }
+    
+    function showJokePopup() {
+        var jokeOverlay = document.getElementById('jokeOverlay');
+        jokeOverlay.style.display = 'flex';
     }
 
     function hidePopup() {
