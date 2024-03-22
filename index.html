@@ -329,7 +329,7 @@
         //     while (!firstImg.complete) {};
             // imgHeight = firstImg.height;
             var imgHeight = leftImageContainer.offsetWidth*1.25;
-            var numImages = Math.floor((letterContainer.offsetHeight - 5/100*letterContainer.offsetHeight) / imgHeight);
+            var numImages = Math.floor((letterContainer.offsetHeight - (5/100)*letterContainer.offsetHeight) / imgHeight) - 1;
         
             // Create and append the remaining images
             var j = 0;
