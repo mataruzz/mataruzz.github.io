@@ -17,7 +17,10 @@
         }
         .wrapper {
             display: flex;
+            justify-content: space-between; /* Added to distribute space between elements */
+            align-items: center;
             height: auto;
+            align-item: center;
         }
         .container {
             margin-top: 5px;
@@ -295,6 +298,7 @@
         container.style.width= '70%';
         container.style.border = 'none';
         container.style.boxShadow = 'none';
+        container.style.padding = '10px';
         playEndlessly();
     }
 
