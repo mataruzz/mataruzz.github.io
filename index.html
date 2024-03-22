@@ -282,7 +282,11 @@
         document.getElementById("open-button").style.display = "none";
         // Change container styles
         var container = document.querySelector('.container');
-        container.style.backgroundColor = 'transparent';        
+        container.style.backgroundColor = 'transparent';    
+        container.style.display = 'flex';
+        container.style.flexDirection = 'column';
+        container.style.justifyContent = 'center';
+        container.style.alignItems = 'center';
         container.style.width= '70%';
         container.style.border = 'none';
         container.style.boxShadow = 'none';
