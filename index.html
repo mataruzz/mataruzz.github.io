@@ -71,22 +71,7 @@
 /*             width: 90%; */
 /*             margin: 0 auto; /* Added */ */
         }
-        #giftButton {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: none;
-/*             font-size: 16px; */
-            border-radius: 5px;
-            cursor: pointer;
-/*             transition: background-color 0.3s; */
-        }
-        #giftButton:hover {
-            background-color: darkgreen; /* Darker red on hover */
-        }
+
         #reveal-button {
             background-color: red; /* Red */
             color: white;
@@ -135,10 +120,21 @@
             height: auto; /* Maintain aspect ratio */
             margin: 2% auto;
         }
-/*         
-        #jokeOverlay button:hover {
-            background-color: #45a049; /* Darker Green */
-        } */
+         
+        #jokeOverlay button {
+            background-color: darkgreen; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: none;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
         .overlay {
             position: fixed;
             top: 0;
@@ -185,13 +181,6 @@
 
 <div class="wrapper">
     <div class="left-images">
-<!--         <img src="./images/1-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/2-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/3-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/4-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/5-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/11-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/12-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed"> -->
     </div>   
     <div class="container">
         <img src="./Picture2.png" alt="Envelope" id="envelope">
@@ -234,13 +223,6 @@
         <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
     </div>
     <div class="right-images">
-<!--         <img src="./images/6-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/7-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/8-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/9-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/10-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/13-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/14-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed"> -->
     </div>
 </div>
 
@@ -255,7 +237,9 @@
     <div style="background-color: #fff;padding: 20px;border-radius: 10px;text-align: center;width: 80%;">
         <img src="./images/funny_me-Photoroom.png-Photoroom.png" style="width: 40%; height: auto; margin-bottom: 10px;" >
         <h2>I'm your gift mi lover &lt;3</h2>
-        <button id="giftButton" onclick="showFinalPopup()">I WANT MY GIFT!</button>
+        <div class='center'>
+            <button id="giftButton" onclick="showFinalPopup()">I WANT MY GIFT!</button>
+        </div>
     </div>
 </div>
     
