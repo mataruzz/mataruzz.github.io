@@ -224,14 +224,14 @@
         </div>
         <button id="open-button" onclick="openEnvelope()">Open Envelope</button>
     </div>
-    <div class="right-images">
+<!--     <div class="right-images">
         <img src="./images/6-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
         <img src="./images/7-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
         <img src="./images/8-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
         <img src="./images/9-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
         <img src="./images/10-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
         <img src="./images/13-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
-        <img src="./images/14-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed">
+        <img src="./images/14-Photoroom.png-Photoroom.png" alt="HELLO" class="fixed"> -->
     </div>
 </div>
 
@@ -304,15 +304,23 @@
         
         // Get the container where images will be appended
         var leftImageContainer = document.querySelector('.left-images');
+        var rightImageContainer = document.querySelector('.right-images');
        
         // Create and append the necessary number of image elements
         for (var i = 0; i < numImages; i++) {
             var img = document.createElement('img');
-            var imageNumber = (i % 10) + 1; // Calculate image number from 1 to 10, and repeat
-            img.src = './images/' + imageNumber + '-Photoroom.png-Photoroom.png'; // Replace 'your-image-url-' with your image URL prefix
+            var imgRight = document.createElement('img');
+            var leftImageNumber = (i % 8) + 1; // Calculate image number from 1 to 10, and repeat
+            var rightImageNumber = (j % 14) + 8;
+            img.src = './images/' + leftImageNumber + '-Photoroom.png-Photoroom.png'; // Replace 'your-image-url-' with your image URL prefix
+            imgRight.src = './images/' + rightImageNumber + '-Photoroom.png-Photoroom.png'; // Replace 'your-image-url-' with your image URL prefix
             img.alt = 'LeftImage' + (i + 1); // Set alt text for accessibility
+            imgRight.alt = 'LeftImage' + (j + 1); // Set alt text for accessibility
             img.style.height = 'auto'; // Set the height of each image
+            imgRight.style.height = 'auto'; // Set the height of each image
             leftImageContainer.appendChild(img);
+            rightImageContainer.appendChild(imgRight);
+            j = j+1;
         }
     }
 
